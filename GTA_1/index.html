@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="main">
+            <div class="main__child">
+                <div class="left">
+                    <div class="title">
+                        <div class="title__lines">
+                            <div class="title__line1"></div>
+                            <div class="title__line2"></div>
+                            <div class="title__line3"></div>
+                        </div>
+                        <div class="title__text">
+                            ПАРАМЕТРЫ  ИГРЫ
+                        </div>
+                    </div>
+                </div>
+
+            
+        
+                <div class="content">
+                    <div class="header__top">
+                        <button>ГОНКА</button>
+                    </div>
+                    <div class="header__descr">
+                        КРУГОВОЕ ДВИЖЕНИЕ
+                    </div>
+
+                    <div class="header">
+                        
+                        
+                        <div class="header__text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+                            commodo consequat.
+                        </div>
+                        <div class="header__bottom">
+                            <div class="bottom__text">
+                                24% / 100%
+                            </div>
+                            <div class="bottom__progress">
+                                <progress value="24" max="100"></progress>
+                            </div>
+                        </div> 
+                    </div>
+                    <div class="list" style="margin-top: 15px; height: 375px; overflow-y: scroll; padding-right: 20px;">
+                        <div class="list__item" v-for="item in listItems">
+                            <div class="list__left">
+                                <div class="list__icon">
+                                    <div>{{ item.id }}</div>
+                                </div>
+                                <div class="list__text">
+                                    {{ item.name }}
+                                </div>
+                            </div>
+                            <div class="list__right">
+                                <div class="list__badge" :style="{ background: item.statusColor }" style="margin-right: 15px;">
+                                    {{ item.status }}
+                                </div>
+                                <div class="list__close">
+                                    <img src="./close.svg" alt="" srcset="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="buttons">
+                            <div class="default-button" style="margin-right: 10px;">пригласить друга</div>
+                            <div class="default-button">параметры миссии</div>
+                        </div>
+                        <div class="online">
+                            <img src="./online.svg" alt="" srcset="">
+                            <div class="online__text">14/26</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="left-arrow">
+            <img src="./left_arrow.svg" alt="">
+        </div> -->
+    </div>
+</body>
+
+</html>
+
+<script>
+var app = new Vue({
+    el: '.main',
+    data: {
+        listItems: [
+            { id: 145, name: 'AnTi_Manti', status: 'хост', statusColor: '#1970E9' },
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 128, name: 'SpOrtkK', status: 'вошёл', statusColor: '#47C147'},
+            { id: 98, name: 'Blackflex ', status: 'вошёл', statusColor: '#47C147'},
+            { id: 153, name: 'California*Soul*', status: 'вошёл', statusColor: '#47C147'},
+            { id: 12, name: 'PeIIIaJIbIII,uk', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 213, name: 'ZhanBratan', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+            { id: 78, name: 'YouTouchMeTaLaLA', status: 'не вошёл', statusColor: '#FF1E1D'},
+        ]
+    },
+    mounted() {
+
+    }
+})
+</script>
+
+<style>
+
+</style>
